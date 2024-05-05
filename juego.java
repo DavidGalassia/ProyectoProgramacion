@@ -14,8 +14,8 @@ public class juego {
 
         ArrayList<String> palabras_a_encontrar_menos_encontradas = new ArrayList<>(palabras_a_encontrar);
 
-        System.out.println("Introduzca '1' cuando desee iniciar el juego");
-        System.out.println(" 1. Iniciar el juego");
+        System.out.println("  Introduzca '1' cuando desee iniciar el juego");
+        System.out.println("  1. Iniciar el juego");
         int inicio = input.nextInt();
         int i = 0;
 
@@ -97,7 +97,7 @@ public class juego {
                         puntos = calcularPuntos(tiempoTotal);
 
                         System.out.println("Felicidades, has completado la sopa de letras");
-                        System.out.println("Tu tiempo total fue de: " + (tiempoTotal / (1000 * 60)) + " minutos.");
+                        System.out.println("Tu tiempo total fue de: " + (tiempoTotal / (1000)) + " segundos.");
                         System.out.println("Obtuviste " + puntos + " puntos.");
 
                         // Detener el temporizador
@@ -128,7 +128,7 @@ public class juego {
         long tiempoFin = System.currentTimeMillis(); //Se toma el tiempo del sistema al terminar el juego
         long tiempoTotal = tiempoFin - tiempoInicio;
 
-        System.out.println("Tu tiempo total fue de: " + (tiempoTotal / (1000 / 60)) + " minutos.");
+        System.out.println("Tu tiempo total fue de: " + (tiempoTotal / (1000)) + " segundos.");
         System.out.println("Obtuviste " + 0 + " puntos.");
 
         timer.cancel();
@@ -157,7 +157,7 @@ public class juego {
 
         int y,x;
 
-        System.out.println("Ejemplo de posiciones (x,y)");
+        System.out.println("  Ejemplo de posiciones (x,y)");
 
         for (y = 0; y < 5; y++) {
             for (x = 0; x < 5; x++) {
@@ -171,7 +171,7 @@ public class juego {
         }
 
         System.out.println(" ");
-        System.out.println("Sopa de letras: ");
+        System.out.println("  Sopa de letras: ");
         System.out.println(" ");
 
         for (y = 0; y < sopa_de_letras.length; y++) {
@@ -181,6 +181,7 @@ public class juego {
             System.out.println(" ");
         }
 
+        System.out.println(" ");
     }
     public static boolean buscador_palabras(char[][] sopa_de_letras, String palabra_encontrada){
 
