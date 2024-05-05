@@ -157,6 +157,8 @@ public class juego {
 
         int y,x;
 
+        System.out.println("Ejemplo de posiciones (x,y)");
+
         for (y = 0; y < 5; y++) {
             for (x = 0; x < 5; x++) {
 
@@ -168,6 +170,8 @@ public class juego {
             System.out.println(" ");
         }
 
+        System.out.println(" ");
+        System.out.println("Sopa de letras: ");
         System.out.println(" ");
 
         for (y = 0; y < sopa_de_letras.length; y++) {
