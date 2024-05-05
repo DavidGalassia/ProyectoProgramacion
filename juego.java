@@ -18,12 +18,12 @@ public class juego {
         System.out.println("  1. Iniciar el juego");
         int inicio = input.nextInt();
         int i = 0;
+        long tiempoInicio = System.currentTimeMillis(); //Se toma el tiempo del sistema al iniciar el juego
 
         if (inicio != 1) {
             System.out.println("Opcion no disponible");
 
         } else {
-            long tiempoInicio = System.currentTimeMillis(); //Se toma el tiempo del sistema al iniciar la sopa
 
             imprimir_sopa(sopa_de_letras);
 
@@ -97,7 +97,7 @@ public class juego {
                         puntos = calcularPuntos(tiempoTotal);
 
                         System.out.println("Felicidades, has completado la sopa de letras");
-                        System.out.println("Tu tiempo total fue de: " + (tiempoTotal / (1000)) + " segundos.");
+                        System.out.println("Tu tiempo total fue de: " + (tiempoTotal / (1000*60)) + " minutos.");
                         System.out.println("Obtuviste " + puntos + " puntos.");
 
                         // Detener el temporizador
@@ -137,13 +137,13 @@ public class juego {
         int puntos = 0;
 
         // Convertir el tiempo a minutos
-        double minutos = tiempo / (1000 * 60);
+        double minutos = (double) tiempo / (1000 * 60);
 
-        if (minutos >= 8) {
+        if (minutos >= 20) {
             puntos = 10;
-        } else if (minutos >= 6) {
+        } else if (minutos >= 15) {
             puntos = 25;
-        } else if (minutos >= 4) {
+        } else if (minutos >= 10) {
             puntos = 40;
         } else {
             puntos = 60;
